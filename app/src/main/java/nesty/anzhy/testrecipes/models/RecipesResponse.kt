@@ -6,7 +6,6 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class RecipesResponse(
-
 	@field:SerializedName("recipes")
 	val recipes: List<RecipesItem?>? = null
 ) : Parcelable
