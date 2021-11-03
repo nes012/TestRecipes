@@ -1,16 +1,17 @@
-package nesty.anzhy.testrecipes
+package nesty.anzhy.testrecipes.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import nesty.anzhy.testrecipes.databinding.FragmentDetailsBinding
+import dagger.hilt.android.AndroidEntryPoint
+import nesty.anzhy.testrecipes.databinding.FragmentRecipesBinding
 
+@AndroidEntryPoint
+class RecipesFragment : Fragment() {
 
-class DetailsFragment : Fragment() {
-
-    private var _binding: FragmentDetailsBinding? = null
+    private var _binding: FragmentRecipesBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,9 +19,10 @@ class DetailsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentDetailsBinding.inflate(inflater, container, false)
+        _binding = FragmentRecipesBinding.inflate(inflater, container, false)
         return binding.root
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
