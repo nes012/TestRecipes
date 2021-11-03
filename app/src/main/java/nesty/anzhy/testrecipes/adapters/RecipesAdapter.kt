@@ -12,7 +12,6 @@ class RecipesAdapter:RecyclerView.Adapter<RecipesAdapter.VH>() {
 
     private var recipes = emptyList<RecipesItem>()
 
-
     class VH(
         val binding: RecipesItemLayoutBinding
     ) : RecyclerView.ViewHolder(binding.root)
